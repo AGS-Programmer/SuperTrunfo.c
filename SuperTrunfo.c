@@ -2,6 +2,7 @@
 
 int main() {
 
+    //Carta 1   
     char estado1 = 'A';
     char codigo1[5] = "A01";
     char cidade1[25] = "Salvador";
@@ -14,6 +15,7 @@ int main() {
     float pibpercapita1 = pib1 / populacao1;
     float superpoder1 = (int) populacao1 + area1 + pib1 + pontosturisticos1 + densidadeinversa1 + pibpercapita1;
 
+    //Carta 2
     char estado2 = 'B';
     char codigo2[5] = "B02";
     char cidade2[25] = "Fortaleza";
