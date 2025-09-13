@@ -2,31 +2,29 @@
 
 int main() {
 
-    //Carta 1   
     char estado1 = 'A';
     char codigo1[5] = "A01";
     char cidade1[25] = "Salvador";
     int populacao1 = 2570000;
     float area1 = 693.45;
-    float pib1 = 62900000; //Inserir como 62.9
+    float pib1 = 62.9; 
     int pontosturisticos1 = 20;
     float densidadepopulacional1 = populacao1 / area1;
     float densidadeinversa1 = 1 / densidadepopulacional1;
-    float pibpercapita1 = pib1 / populacao1;
-    float superpoder1 = (int) populacao1 + area1 + pib1 + pontosturisticos1 + densidadeinversa1 + pibpercapita1;
+    float pibpercapita1 = (pib1 * 10000000) / populacao1;
+    float superpoder1 = (long int) populacao1 + area1 + pib1 + pontosturisticos1 + densidadeinversa1 + pibpercapita1;
 
-    //Carta 2
     char estado2 = 'B';
     char codigo2[5] = "B02";
     char cidade2[25] = "Fortaleza";
     int populacao2 = 2580000;
     float area2 = 314.93;
-    float pib2 = 73400000; //Inserir como 73.4
+    float pib2 = 73.4;
     int pontosturisticos2 = 23;
     float densidadepopulacional2 = populacao2 / area2;
     float densidadeinversa2 = 1 / densidadepopulacional2;
-    float pibpercapita2 = pib2 / populacao2;
-    float superpoder2 = (int) populacao2 + area2 + pib2 + pontosturisticos2 + densidadeinversa2 + pibpercapita2;
+    float pibpercapita2 = (pib2 * 1000000) / populacao2;
+    float superpoder2 = (long int) populacao2 + area2 + pib2 + pontosturisticos2 + densidadeinversa2 + pibpercapita2;
 
     //Dados da Carta 1
     printf("** Cadastre os dados da Carta 1: **\n");
@@ -109,7 +107,8 @@ int main() {
     resultadoDensidadePopulacional = densidadeinversa1 > densidadeinversa2;
     resultadoPIBperCapita = pibpercapita1 > pibpercapita2;
     resultadoSuperPoder = superpoder1 > superpoder2;
-
+    
+    
     //Comparação de Cartas
     printf("Comparação de Cartas:\n");
     printf("População: Carta 2 venceu (%d)\n", resultadoPopulacao);
@@ -121,5 +120,5 @@ int main() {
     printf("Super Poder: Carta 2 venceu (%d)\n", resultadoSuperPoder);
 
     return 0;
-    
+
 }
